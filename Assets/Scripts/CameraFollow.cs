@@ -21,6 +21,11 @@ public class CameraFollow : MonoBehaviour
 
     bool lookAheadStopped;
 
+    [SerializeField]
+    bool test1;
+    [SerializeField]
+    bool test2;
+
     void Start()
     {
         focusArea = new FocusArea(target.collider.bounds, focusAreaSize);

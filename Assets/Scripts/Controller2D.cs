@@ -203,8 +203,8 @@ public class Controller2D : RaycastController
         if (maxSlopeHitLeft ^ maxSlopeHitRight) // Бинарные операторы ^ являются предопределенными для целых типов и bool. Для целых типов оператор ^ выполняет побитовую операцию исключающего OR его операндов. Для операндов bool оператор ^ выполняет операцию логического исключающего OR операндов, то есть результатом будет являться значение true только в том случае, если ровно один из его операндов имеет значение true.
         // Исправляем ошибку когда при малом угле поверхности наш обьект потряхивало из-за неправильной коллизии 
         {
-            SlideDownMaxSlope(maxSlopeHitLeft, ref deltaAmount);
-            SlideDownMaxSlope(maxSlopeHitRight, ref deltaAmount);
+            SlideDownMaxSlope(maxSlopeHitLeft, ref deltaAmount); // если меняем местами строки работает некорректно.
+            SlideDownMaxSlope(maxSlopeHitRight, ref deltaAmount);// в связи с чем можно сделать вывод что применяеться к строке в какой есть булин который true в операнде.
         }
 
         if (!collisions.slidingDownMaxSlope)

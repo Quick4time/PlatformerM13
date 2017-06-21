@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
                     velocity.y = 0;
                 }
             }
-            print("Gravity: " + gravity + "  Jump Velocity: " + maxjumpVelocity);
+            //print("Gravity: " + gravity + "  Jump Velocity: " + maxjumpVelocity);
         }
     }
     public void SetDirectionalInput(Vector2 input)
